@@ -34,7 +34,9 @@ void Boutique::remplir(){
     int identifiant=0;//s'incremente de 1 a chaque fois qu'on associe a une carte
 
     ///CREATURES///
-    Creature crea1("Bloom", "Heroine du Winx club", 15, 15, 0, 10,5);
+    Creature * crea1 = new Creature("Bloom", "Heroine du Winx club", 15, 15, 42, 10,5);
+    Attaque * att1 = new Attaque (nom,des, coup, type, HP, pos);
+    crea1->ajouter(att1);
     Creature crea2("Stella", "Meilleure amie de Bloom et membre du Winx club", 15, 15, 0,10,6);
     Creature crea3("Tecna", "Genie de la technologie", 15, 25, 0, 10,7);
     Creature crea4("Flora", "Meilleure amie de la nature", 15,25,0,10,8);
@@ -58,21 +60,24 @@ void Boutique::remplir(){
     Spe6 speciale6;
 
     ///Vecteurs///
-    std::vector <Carte*> cartes = getCartes();
-    std::vector <Carte*> cartesU = getCartesU();
+    std::vector <Carte*> cartes ;
+    std::vector <Carte*> cartesU;
 
 
     ////////////////////
     ///AJOUT CREATURES//
     ////////////////////
 
-    for(int i=0; i<crea1.getQuantite(); i++) {
-        crea1.setIdentifiant(identifiant); //on assigne un identifiant a une carte
-        cartes.push_back(&crea1);
-        if(i == crea1.getQuantite()-1) cartesU.push_back(&crea1); //Si c'est la derniere carte a ajouter, on la copie dans le vecteur de cartes uniques
+    for(int i=0; i<crea1->getQuantite(); i++) {
+        crea1->setIdentifiant(identifiant); //on assigne un identifiant a une carte
+        cartes.push_back(crea1);
+        if(i == crea1->getQuantite()-1) cartesU.push_back(crea1); //Si c'est la derniere carte a ajouter, on la copie dans le vecteur de cartes uniques
         identifiant++; //On incremente dans la boucle afin que l'identifiant soit unique pour chaque carte
     }
-
+    /*
+    Creature * crea = (Creature *) cartes[0];
+    std::cout << crea->getLP() <<std::endl;*/
+    /*
     for(int i=0; i<crea2.getQuantite(); i++) {
         crea2.setIdentifiant(identifiant);
         cartes.push_back(&crea2);
@@ -194,7 +199,7 @@ void Boutique::remplir(){
         if(i== speciale6.getQuantite()-1) cartesU.push_back(&speciale6);
         identifiant++;
     }
-
+    */
     //On met les vecteurs modifies dans les attibuts
     setCartes(cartes);
     setCartesU(cartesU);

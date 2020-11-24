@@ -3,8 +3,10 @@
 Creature::Creature()
 {}
 Creature::Creature(std::string nom, std::string description,int prix, int LP, int energie,int quantite,int identifiant)
-:Carte(nom,description, prix,2, quantite, identifiant)
+:Carte(nom,description, prix, 2, quantite, identifiant), m_LP(LP), m_energie(energie)
 {}
+
+
 Creature::~Creature()
 {}
 
@@ -43,7 +45,8 @@ std::vector <Attaque> Creature::getAttaque()
 void Creature :: ajouter(std::string nom, std::string des, int coup, int type, int HP, bool pos)
 {
     //Creature attObjt(getNom(),getDescription(),getCoupPE(), getType(),getHP(),getPossible());
-    m_att.push_back(Attaque(nom,des, coup, type, HP, pos));
+    Attaque att = Attaque(nom,des, coup, type, HP, pos);
+    m_att.push_back(att);
 }
 
 void Creature::afficher()

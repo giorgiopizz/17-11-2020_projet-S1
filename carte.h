@@ -14,7 +14,7 @@ protected:
     int m_identifiant;
 
 public:
-    Carte(std::string nom, std::string description, int prix, int genre, int , int identifiant);
+    Carte(std::string nom, std::string description, int prix, int genre, int quantite, int identifiant);
     Carte(int indentifiant); //les informations seront recuperer dans la première partie du file "Joueur"
     Carte();
     ~Carte();
