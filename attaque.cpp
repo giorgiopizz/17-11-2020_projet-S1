@@ -5,7 +5,7 @@
 
 Attaque::Attaque()
 {}
-/*
+
 Attaque::Attaque(std::string nom, std::string description, int coupPE, int typePE, int HP, bool possible)
 :m_nom(nom), m_description(description), m_coupPE(coupPE), m_typePE(typePE), m_HP(HP), m_possible(possible)
 {}

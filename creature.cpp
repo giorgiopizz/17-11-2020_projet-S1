@@ -40,7 +40,7 @@ std::vector <Attaque> Creature::getAttaque()
 }
 
 
-void Creature :: ajouter(std::string nom, std::string des, int coup, int type, int HP, int pos)
+void Creature :: ajouter(std::string nom, std::string des, int coup, int type, int HP, bool pos)
 {
     //Creature attObjt(getNom(),getDescription(),getCoupPE(), getType(),getHP(),getPossible());
     m_att.push_back(Attaque(nom,des, coup, type, HP, pos));

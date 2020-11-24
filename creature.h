@@ -34,7 +34,7 @@ public:
     //Attaque GestionLP(Attaque );
 
     // std::vector<Attaque> //finDeVie(std::vector<Carte> deck, std::vector<Carte> cimetiere, int alerte);
-    void ajouter(std::string nom, std::string des, int coup, int type, int HP, int pos);
+    void ajouter(std::string nom, std::string des, int coup, int type, int HP, bool pos);
     //std::vector<Carte> finDeVie(std::vector<Carte> deck, std::vector<Carte> cimetiere, int alerte);
 };
 

@@ -615,7 +615,7 @@
 1606061080 source:c:\users\prontoalluso\documents\università\cours\inge 2\informatique\projet s1\17-11-2020_projet s1\joueur.cpp
 	"joueur.h"
 
-1606206129 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\attaque.cpp
+1606207634 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\attaque.cpp
 	"attaque.h"
 	"carte.h"
 	<iostream>
@@ -633,16 +633,17 @@
 	<cstdio>
 	<cstdlib>
 
-1606205110 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\boutique.cpp
+1606207207 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\boutique.cpp
 	"boutique.h"
 
-1606205110 c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\boutique.h
+1606207021 c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\boutique.h
 	"carte.h"
 	"energie.h"
 	"speciales.h"
 	"creature.h"
 	<iostream>
 	<vector>
+	<string>
 
 1606205110 c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\energie.h
 	<string>
@@ -656,7 +657,7 @@
 	<vector>
 	<time.h>
 
-1606205110 c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\creature.h
+1606207585 c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\creature.h
 	<vector>
 	"carte.h"
 	"attaque.h"
@@ -683,7 +684,7 @@
 	"carte.h"
 	"boutique.h"
 
-1606205110 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\creature.cpp
+1606207556 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\creature.cpp
 	"creature.h"
 
 1606205110 source:c:\users\giorg\downloads\17-11-2020_projet_s1\17-11-2020_projet s1\energie.cpp

@@ -9,19 +9,19 @@ Boutique::Boutique()
 Boutique::~Boutique(){}
 
 //Accesseurs
-std::vector<Carte> Boutique::getCartes(){
+std::vector<Carte*> Boutique::getCartes(){
     return m_cartes;
 }
 
-void Boutique::setCartes(std::vector<Carte> cartes){
+void Boutique::setCartes(std::vector<Carte*> cartes){
     m_cartes=cartes;
 }
 
-std::vector<Carte> Boutique::getCartesU(){
+std::vector<Carte*> Boutique::getCartesU(){
     return m_cartesU;
 }
 
-void Boutique::setCartesU(std::vector<Carte> cartesU){
+void Boutique::setCartesU(std::vector<Carte*> cartesU){
     m_cartesU=cartesU;
 }
 
@@ -43,6 +43,7 @@ void Boutique::remplir(){
     Creature crea7("Roxy", "Murmure a l'oreille des animaux", 45, 22, 0, 50,11);
 
     ///ENERGIES///
+
     Energie e1("Source d'energie", "Energie fournie par la technologie", 5, 1, 15, "Technologie",50,1);
     Energie e2("Source d'energie", "Energie fournie par la nature", 5,1,2,"Terre", 50,2);
     Energie e3("Source d'energie", "Energie fournie par la lumiere", 5,1,14,"Lumiere", 50,3);
@@ -57,8 +58,8 @@ void Boutique::remplir(){
     Spe6 speciale6;
 
     ///Vecteurs///
-    std::vector <Carte> cartes = getCartes();
-    std::vector <Carte> cartesU = getCartesU();
+    std::vector <Carte*> cartes = getCartes();
+    std::vector <Carte*> cartesU = getCartesU();
 
 
     ////////////////////
@@ -67,50 +68,50 @@ void Boutique::remplir(){
 
     for(int i=0; i<crea1.getQuantite(); i++) {
         crea1.setIdentifiant(identifiant); //on assigne un identifiant a une carte
-        cartes.push_back(crea1);
-        if(i == crea1.getQuantite()-1) cartesU.push_back(crea1); //Si c'est la derniere carte a ajouter, on la copie dans le vecteur de cartes uniques
+        cartes.push_back(&crea1);
+        if(i == crea1.getQuantite()-1) cartesU.push_back(&crea1); //Si c'est la derniere carte a ajouter, on la copie dans le vecteur de cartes uniques
         identifiant++; //On incremente dans la boucle afin que l'identifiant soit unique pour chaque carte
     }
 
     for(int i=0; i<crea2.getQuantite(); i++) {
         crea2.setIdentifiant(identifiant);
-        cartes.push_back(crea2);
-        if(i== crea2.getQuantite()-1) cartesU.push_back(crea2);
+        cartes.push_back(&crea2);
+        if(i== crea2.getQuantite()-1) cartesU.push_back(&crea2);
         identifiant++;
     }
 
     for(int i=0; i<crea3.getQuantite(); i++) {
         crea3.setIdentifiant(identifiant);
-        cartes.push_back(crea3);
-        if(i== crea3.getQuantite()-1) cartesU.push_back(crea3);
+        cartes.push_back(&crea3);
+        if(i== crea3.getQuantite()-1) cartesU.push_back(&crea3);
         identifiant++;
     }
 
     for(int i=0; i<crea4.getQuantite(); i++) {
         crea4.setIdentifiant(identifiant);
-        cartes.push_back(crea4);
-        if(i== crea4.getQuantite()-1) cartesU.push_back(crea4);
+        cartes.push_back(&crea4);
+        if(i== crea4.getQuantite()-1) cartesU.push_back(&crea4);
         identifiant++;
     }
 
     for(int i=0; i<crea5.getQuantite(); i++) {
         crea5.setIdentifiant(identifiant);
-        cartes.push_back(crea5);
-        if(i== crea5.getQuantite()-1) cartesU.push_back(crea5);
+        cartes.push_back(&crea5);
+        if(i== crea5.getQuantite()-1) cartesU.push_back(&crea5);
         identifiant++;
     }
 
     for(int i=0; i<crea6.getQuantite(); i++) {
         crea6.setIdentifiant(identifiant);
-        cartes.push_back(crea6);
-        if(i== crea6.getQuantite()-1) cartesU.push_back(crea6);
+        cartes.push_back(&crea6);
+        if(i== crea6.getQuantite()-1) cartesU.push_back(&crea6);
         identifiant++;
     }
 
     for(int i=0; i<crea7.getQuantite(); i++) {
         crea7.setIdentifiant(identifiant);
-        cartes.push_back(crea7);
-        if(i== crea7.getQuantite()-1) cartesU.push_back(crea7);
+        cartes.push_back(&crea7);
+        if(i== crea7.getQuantite()-1) cartesU.push_back(&crea7);
         identifiant++;
     }
 
@@ -121,29 +122,29 @@ void Boutique::remplir(){
 
     for(int i=0; i<e1.getQuantite(); i++) {
         e1.setIdentifiant(identifiant);
-        cartes.push_back(e1);
-        if(i==e1.getQuantite()-1) cartesU.push_back(e1);
+        cartes.push_back(&e1);
+        if(i==e1.getQuantite()-1) cartesU.push_back(&e1);
         identifiant++;
     }
 
     for(int i=0; i<e2.getQuantite(); i++) {
         e2.setIdentifiant(identifiant);
-        cartes.push_back(e2);
-        if(i== e2.getQuantite()-1) cartesU.push_back(e2);
+        cartes.push_back(&e2);
+        if(i== e2.getQuantite()-1) cartesU.push_back(&e2);
         identifiant++;
     }
 
     for(int i=0; i<e3.getQuantite(); i++) {
         e3.setIdentifiant(identifiant);
-        cartes.push_back(e3);
-        if(i== e3.getQuantite()-1) cartesU.push_back(e3);
+        cartes.push_back(&e3);
+        if(i== e3.getQuantite()-1) cartesU.push_back(&e3);
         identifiant++;
     }
 
     for(int i=0; i<e4.getQuantite(); i++) {
         e4.setIdentifiant(identifiant);
-        cartes.push_back(e4);
-        if(i== e4.getQuantite()-1) cartesU.push_back(e4);
+        cartes.push_back(&e4);
+        if(i== e4.getQuantite()-1) cartesU.push_back(&e4);
         identifiant++;
     }
 
@@ -154,43 +155,43 @@ void Boutique::remplir(){
 
     for(int i=0; i<speciale1.getQuantite(); i++) {
         speciale1.setIdentifiant(identifiant);
-        cartes.push_back(speciale1);
-        if(i== speciale1.getQuantite()-1) cartesU.push_back(speciale1);
+        cartes.push_back(&speciale1);
+        if(i== speciale1.getQuantite()-1) cartesU.push_back(&speciale1);
         identifiant++;
     }
 
     for(int i=0; i<speciale2.getQuantite(); i++) {
         speciale2.setIdentifiant(identifiant);
-        cartes.push_back(speciale2);
-        if(i== speciale2.getQuantite()-1) cartesU.push_back(speciale2);
+        cartes.push_back(&speciale2);
+        if(i== speciale2.getQuantite()-1) cartesU.push_back(&speciale2);
         identifiant++;
     }
 
     for(int i=0; i<speciale3.getQuantite(); i++) {
         speciale3.setIdentifiant(identifiant);
-        cartes.push_back(speciale3);
-        if(i== speciale3.getQuantite()-1) cartesU.push_back(speciale3);
+        cartes.push_back(&speciale3);
+        if(i== speciale3.getQuantite()-1) cartesU.push_back(&speciale3);
         identifiant++;
     }
 
     for(int i=0; i<speciale4.getQuantite(); i++) {
         speciale4.setIdentifiant(identifiant);
-        cartes.push_back(speciale4);
-        if(i== speciale4.getQuantite()-1) cartesU.push_back(speciale4);
+        cartes.push_back(&speciale4);
+        if(i== speciale4.getQuantite()-1) cartesU.push_back(&speciale4);
         identifiant++;
     }
 
     for(int i=0; i<speciale5.getQuantite(); i++) {
         speciale5.setIdentifiant(identifiant);
-        cartes.push_back(speciale5);
-        if(i== speciale5.getQuantite()-1) cartesU.push_back(speciale5);
+        cartes.push_back(&speciale5);
+        if(i== speciale5.getQuantite()-1) cartesU.push_back(&speciale5);
         identifiant++;
     }
 
     for(int i=0; i<speciale6.getQuantite(); i++) {
         speciale6.setIdentifiant(identifiant);
-        cartes.push_back(speciale6);
-        if(i== speciale6.getQuantite()-1) cartesU.push_back(speciale6);
+        cartes.push_back(&speciale6);
+        if(i== speciale6.getQuantite()-1) cartesU.push_back(&speciale6);
         identifiant++;
     }
 
@@ -220,7 +221,7 @@ Carte Boutique::choisir(/*Joueur joueur*/){
     int choix;
     int i=1;
     Carte achat;
-    std::vector<Carte> cartesU = getCartesU();
+    std::vector<Carte*> cartesU = getCartesU();
 
     ///Pour ajouter la carte dans la collection du joueur
     //Collection collection=joueur.getCollection();
@@ -230,7 +231,7 @@ Carte Boutique::choisir(/*Joueur joueur*/){
 
     for(const auto elem : cartesU){
         i++;
-        if(choix==i) achat=elem; //Si on est arrives au niveau de l'indice de la carte choisie on recupere la carte choisie
+        if(choix==i) achat=*elem; //Si on est arrives au niveau de l'indice de la carte choisie on recupere la carte choisie
     }
 
     ///GESTION CAGNOTTE JOUEUR
@@ -248,8 +249,8 @@ Carte Boutique::choisir(/*Joueur joueur*/){
 //Parametre : carte achetee
 //pas de retour
 void Boutique::supprimerCarte(Carte achat){
-    std::vector <Carte> cartesU=getCartesU();
-    std::vector <Carte> cartes=getCartes();
+    std::vector <Carte*> cartesU=getCartesU();
+    std::vector <Carte*> cartes=getCartes();
 
     int i=0;
     int stop=0; //variable qui va nous permettre de supprimer qu'une seule fois le modele de la carte achetee
@@ -257,7 +258,7 @@ void Boutique::supprimerCarte(Carte achat){
     do{
         for(const auto elem : cartes){
             i++;
-            if(elem == achat){
+            if(*elem == achat){
                 cartes.erase(cartes.begin()+i);//Si on retrouve la carte achetee dans le vecteur on la supprime du vect
                 stop = 1; //Pour sortir de la boucle
             }
@@ -267,7 +268,7 @@ void Boutique::supprimerCarte(Carte achat){
     //Si c'est la derniere carte de ce modele
     if(achat.getQuantite()==1) {
         for(const auto elem : cartesU){
-            if(elem==achat) cartesU.erase(cartes.begin()+i); //Si on retrouve la carte achetee dans le vecteur on la supprime du vect
+            if(*elem==achat) cartesU.erase(cartes.begin()+i); //Si on retrouve la carte achetee dans le vecteur on la supprime du vect
              i++;
         }
     }

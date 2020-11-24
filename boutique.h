@@ -8,12 +8,13 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 class Boutique
 {
 private:
-    std::vector <Carte> m_cartes; //Vecteur avec toutes les cartes
-    std::vector <Carte> m_cartesU; //Vecteur qui contient liste des cartes sans doublons, pratique pour affichage
+    std::vector <Carte*> m_cartes; //Vecteur avec toutes les cartes
+    std::vector <Carte*> m_cartesU; //Vecteur qui contient liste des cartes sans doublons, pratique pour affichage
 
 
 public :
@@ -21,11 +22,11 @@ public :
     Boutique();
     ~Boutique();
 
-    std::vector<Carte> getCartes();
-    std::vector<Carte> getCartesU();
+    std::vector<Carte*> getCartes();
+    std::vector<Carte*> getCartesU();
 
-    void setCartes(std::vector<Carte> cartes);
-    void setCartesU(std::vector<Carte> cartesU);
+    void setCartes(std::vector<Carte*> cartes);
+    void setCartesU(std::vector<Carte*> cartesU);
 
 
 
