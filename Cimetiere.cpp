@@ -12,11 +12,11 @@ Cimetiere::~Cimetiere(){
 
 //Accesseurs
 
-void Cimetiere::setCimetiere(std::vector<Carte> cartes){
+void Cimetiere::setCimetiere(std::vector<Carte*> cartes){
     m_cartes=cartes;
 }
 
-std::vector<Carte> Cimetiere::getCimetiere(){
+std::vector<Carte*> Cimetiere::getCimetiere(){
     return m_cartes;
 }
 
@@ -35,7 +35,7 @@ void Cimetiere::afficher(){
 //parametre : carte morte
 //pas de retour
 void Cimetiere::ajouter(Carte deadCard){
-    std::vector <Carte> cimetiere = getCimetiere();
-    cimetiere.push_back(deadCard);
+    std::vector <Carte*> cimetiere = getCimetiere();
+    cimetiere.push_back(&deadCard);
     setCimetiere(cimetiere);
 }

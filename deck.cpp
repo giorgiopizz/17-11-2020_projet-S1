@@ -117,11 +117,11 @@ void Deck::supprimer(Carte carteAsupp)
     setCartesD(deck);
 }
 
-void Deck::ajouter(Carte nouvCarte)
+void Deck::ajouter(Carte * nouvCarte)
 {
 
     std::vector<Carte*> deck = getCartesD();
-    deck.push_back(&nouvCarte);
+    deck.push_back(nouvCarte);
     setCartesD(deck);
 
 }

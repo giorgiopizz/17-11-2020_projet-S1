@@ -23,7 +23,7 @@ public:
 
     void remplirDeck(std::vector <Carte* > &collection);
     void supprimer(Carte carteAsupp);
-    void ajouter(Carte nouvCarte);
+    void ajouter(Carte * nouvCarte);
 
     void afficherDeck();
 };

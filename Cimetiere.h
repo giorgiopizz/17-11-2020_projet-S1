@@ -7,14 +7,14 @@
 
 class Cimetiere{
 private :
-    std::vector<Carte> m_cartes;
+    std::vector<Carte*> m_cartes;
 
 public :
     Cimetiere();
     ~Cimetiere();
 
-    void setCimetiere(std::vector<Carte> cartes);
-    std::vector <Carte> getCimetiere();
+    void setCimetiere(std::vector<Carte*> cartes);
+    std::vector <Carte*> getCimetiere();
 
     void ajouter(Carte deadCard);
     void afficher();
